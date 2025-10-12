@@ -14,5 +14,7 @@ public interface DoctorService {
 	Optional<Doctor> findbyNames(String doctorname);
 	
 	List<Doctor> findbyspecialization(String specialization);
+	
+	List<Doctor> findbyexperiences (Integer experienceYears);
 
 }

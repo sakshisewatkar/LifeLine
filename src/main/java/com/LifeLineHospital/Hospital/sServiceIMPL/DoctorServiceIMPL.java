@@ -45,6 +45,12 @@ public class DoctorServiceIMPL implements DoctorService {
 		return doctorRepository.findBySpecialization(specialization);
 	}
 
+	@Override
+	public List<Doctor> findbyexperiences(Integer experienceYears) {
+		
+		return doctorRepository.findByExperienceYears(experienceYears);
+	}
+
 
 
 	

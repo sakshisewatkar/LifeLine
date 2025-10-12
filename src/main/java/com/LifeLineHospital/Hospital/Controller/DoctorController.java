@@ -57,4 +57,11 @@ public class DoctorController {
 	public List<Doctor> getonedocspecialization(@PathVariable String specialization){
 		return doctorServiceIMPL.findbyspecialization(specialization);
 	}
+	
+	@GetMapping("/doctor/experienceYears/{experienceYears}")
+	public List<Doctor> getonedocexperiences(@PathVariable Integer experienceYears){
+		return doctorServiceIMPL.findbyexperiences(experienceYears);
+	}
+	
+	
 }
