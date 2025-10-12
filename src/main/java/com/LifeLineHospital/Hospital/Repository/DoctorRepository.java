@@ -1,5 +1,6 @@
 package com.LifeLineHospital.Hospital.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,6 +10,8 @@ import com.LifeLineHospital.Hospital.Model.Doctor;
 @Repository
 public interface DoctorRepository extends JpaRepository<Doctor, Integer> {
 	Optional<Doctor> findByDoctorname(String doctorname);
+	
+	List<Doctor> findBySpecialization(String specialization);
 	
 
 }
