@@ -33,6 +33,12 @@ public class DoctorServiceIMPL implements DoctorService {
 		return doctorRepository.findById(id);
 	}
 
+	@Override
+	public Optional<Doctor> findbyNames(String doctorname) {
+		
+		return doctorRepository.findByDoctorname(doctorname);
+	}
+
 	
 
 }

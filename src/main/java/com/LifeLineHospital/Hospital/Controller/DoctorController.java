@@ -46,4 +46,9 @@ public class DoctorController {
 	public Optional<Doctor> getonedoc(@PathVariable int id){
 		return doctorServiceIMPL.findbyDoctor(id);
 	}
+	
+	@GetMapping("/doctor/name/{doctorname}")
+	public Optional<Doctor> getonedocName(@PathVariable String doctorname){
+		return doctorServiceIMPL.findbyNames(doctorname);
+	}
 }
