@@ -33,11 +33,11 @@ public class DoctorServiceIMPL implements DoctorService {
 		return doctorRepository.findById(id);
 	}
 
-	@Override
-	public Optional<Doctor> findbyNames(String doctorname) {
-		
-		return doctorRepository.findByDoctorname(doctorname);
-	}
+//	@Override
+//	public Optional<Doctor> findbyNames(String doctorname) {
+//		
+//		return doctorRepository.findByDoctorname(doctorname);
+//	}
 
 	@Override
 	public List<Doctor> findbyspecialization(String specialization) {
@@ -49,6 +49,12 @@ public class DoctorServiceIMPL implements DoctorService {
 	public List<Doctor> findbyexperiences(Integer experienceYears) {
 		
 		return doctorRepository.findByExperienceYears(experienceYears);
+	}
+
+	@Override
+	public List<Doctor> findbySerchname(String doctorname) {
+		// TODO Auto-generated method stub
+		return doctorRepository.findByDoctorname(doctorname);
 	}
 
 

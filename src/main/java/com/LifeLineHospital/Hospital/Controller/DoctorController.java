@@ -47,10 +47,10 @@ public class DoctorController {
 		return doctorServiceIMPL.findbyDoctor(id);
 	}
 	
-	@GetMapping("/doctor/name/{doctorname}")
-	public Optional<Doctor> getonedocName(@PathVariable String doctorname){
-		return doctorServiceIMPL.findbyNames(doctorname);
-	}
+//	@GetMapping("/doctor/name/{doctorname}")
+//	public Optional<Doctor> getonedocName(@PathVariable String doctorname){
+//		return doctorServiceIMPL.findbyNames(doctorname);
+//	}
 	
 	
 	@GetMapping("/doctor/specialization/{specialization}")
@@ -63,5 +63,10 @@ public class DoctorController {
 		return doctorServiceIMPL.findbyexperiences(experienceYears);
 	}
 	
+	
+	@GetMapping("/searchdoctor/{doctorname}")
+	public List<Doctor> getonedocName(@PathVariable String doctorname){
+		return doctorServiceIMPL.findbySerchname(doctorname);
+	}
 	
 }

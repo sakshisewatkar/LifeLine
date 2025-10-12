@@ -11,10 +11,11 @@ public interface DoctorService {
 	
 	List<Doctor> alldoctors();
 	Optional<Doctor> findbyDoctor(int id);
-	Optional<Doctor> findbyNames(String doctorname);
+	//Optional<Doctor> findbyNames(String doctorname);
 	
 	List<Doctor> findbyspecialization(String specialization);
 	
 	List<Doctor> findbyexperiences (Integer experienceYears);
+	List<Doctor> findbySerchname(String doctorname);
 
 }
