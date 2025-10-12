@@ -7,5 +7,7 @@ import com.LifeLineHospital.Hospital.Model.Doctor;
 public interface DoctorService {
 	
 	Doctor getalldoctors(Doctor doctor);
+	
+	List<Doctor> alldoctors();
 
 }

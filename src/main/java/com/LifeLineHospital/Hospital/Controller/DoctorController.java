@@ -33,4 +33,10 @@ public class DoctorController {
 		
 		return doctorServiceIMPL.getalldoctors(doctor);
 	}
+	
+	
+	@GetMapping("/getalldoctor")
+	public List<Doctor> getalldoc(){
+		return doctorServiceIMPL.alldoctors();
+	}
 }
