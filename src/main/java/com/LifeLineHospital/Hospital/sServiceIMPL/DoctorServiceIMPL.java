@@ -1,6 +1,7 @@
 package com.LifeLineHospital.Hospital.sServiceIMPL;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,12 @@ public class DoctorServiceIMPL implements DoctorService {
 	public List<Doctor> alldoctors() {
 		// TODO Auto-generated method stub
 		return doctorRepository.findAll();
+	}
+
+	@Override
+	public Optional<Doctor> findbyDoctor(int id) {
+		// TODO Auto-generated method stub
+		return doctorRepository.findById(id);
 	}
 
 	
