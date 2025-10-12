@@ -20,6 +20,12 @@ public class DoctorServiceIMPL implements DoctorService {
 		return doctorRepository.save(doctor);
 	}
 
+	@Override
+	public List<Doctor> alldoctors() {
+		// TODO Auto-generated method stub
+		return doctorRepository.findAll();
+	}
+
 	
 
 }
