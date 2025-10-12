@@ -39,6 +39,14 @@ public class DoctorServiceIMPL implements DoctorService {
 		return doctorRepository.findByDoctorname(doctorname);
 	}
 
+	@Override
+	public List<Doctor> findbyspecialization(String specialization) {
+		// TODO Auto-generated method stub
+		return doctorRepository.findBySpecialization(specialization);
+	}
+
+
+
 	
 
 }

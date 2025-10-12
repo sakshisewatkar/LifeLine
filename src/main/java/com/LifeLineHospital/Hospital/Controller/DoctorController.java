@@ -51,4 +51,10 @@ public class DoctorController {
 	public Optional<Doctor> getonedocName(@PathVariable String doctorname){
 		return doctorServiceIMPL.findbyNames(doctorname);
 	}
+	
+	
+	@GetMapping("/doctor/specialization/{specialization}")
+	public List<Doctor> getonedocspecialization(@PathVariable String specialization){
+		return doctorServiceIMPL.findbyspecialization(specialization);
+	}
 }
