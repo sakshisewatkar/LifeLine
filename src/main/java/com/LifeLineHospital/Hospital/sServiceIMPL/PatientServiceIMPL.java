@@ -1,5 +1,22 @@
 package com.LifeLineHospital.Hospital.sServiceIMPL;
 
-public class PatientServiceIMPL {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.LifeLineHospital.Hospital.Model.Patient;
+import com.LifeLineHospital.Hospital.Repository.PatientRepository;
+import com.LifeLineHospital.Hospital.Service.PatientService;
+@Service
+public class PatientServiceIMPL implements PatientService {
+	
+	@Autowired
+	private PatientRepository patientRepository;
+
+	@Override
+	public Patient savePatient(Patient patient) {
+		return patientRepository.save(patient);
+	}
+	
+
 
 }
