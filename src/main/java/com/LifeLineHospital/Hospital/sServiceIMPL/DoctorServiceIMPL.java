@@ -57,6 +57,18 @@ public class DoctorServiceIMPL implements DoctorService {
 		return doctorRepository.findByDoctorname(doctorname);
 	}
 
+	@Override
+	public Optional<Doctor> deletebyname(String doctorname) {
+		Optional<Doctor> doctorOpt = doctorRepository.findByDoctorname(doctorname)
+                .stream()
+                .findFirst();
+// Delete if present
+doctorOpt.ifPresent(d -> doctorRepository.deleteByDoctorname(d.getDoctorname()));
+
+// Return the deleted doctor (Optional.empty() if not found)
+return doctorOpt;
+	}
+
 	
 
 
