@@ -12,15 +12,20 @@ import com.LifeLineHospital.Hospital.Model.Doctor;
 @Repository
 public interface DoctorRepository extends JpaRepository<Doctor, Integer> {
 	//Optional<Doctor> findByDoctorname(String doctorname);
-	
+	@Query("SELECT x FROM Doctor x WHERE x.specialization LIKE CONCAT('%', :specialization, '%')")
 	List<Doctor> findBySpecialization(String specialization);
 	
-	List<Doctor> findByExperienceYears(Integer experienceYears);
+	
+	@Query("SELECT x FROM Doctor x WHERE x.experienceYears >=  :experienceYears ")
+	List<Doctor> findByExperienceYears(@Param("experienceYears") Integer experienceYears);
 	
 
 	
-	@Query("SELECT x FROM Doctor x WHERE LOWER(x.doctorname) LIKE LOWER(CONCAT('%', :doctorname, '%'))")
+	//@Query("SELECT x FROM Doctor x WHERE LOWER(x.doctorname) LIKE LOWER(CONCAT('%', :doctorname, '%'))")
+	@Query("SELECT x FROM Doctor x WHERE x.doctorname LIKE CONCAT('%', :doctorname, '%')")
 	List<Doctor> findByDoctorname(@Param("doctorname") String doctorname);
+	
+
 	
 
 }

@@ -57,6 +57,8 @@ public class DoctorServiceIMPL implements DoctorService {
 		return doctorRepository.findByDoctorname(doctorname);
 	}
 
+	
+
 
 
 	

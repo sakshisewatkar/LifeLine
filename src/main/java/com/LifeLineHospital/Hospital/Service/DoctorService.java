@@ -17,5 +17,6 @@ public interface DoctorService {
 	
 	List<Doctor> findbyexperiences (Integer experienceYears);
 	List<Doctor> findbySerchname(String doctorname);
+	
 
 }
