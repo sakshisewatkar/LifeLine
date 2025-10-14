@@ -7,5 +7,6 @@ import com.LifeLineHospital.Hospital.Model.Patient;
 public interface PatientService {
 	Patient savePatient (Patient patient);
 	
+	List<Patient> getallpatient();
 
 }

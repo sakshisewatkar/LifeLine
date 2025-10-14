@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.LifeLineHospital.Hospital.Model.Patient;
+import com.LifeLineHospital.Hospital.Service.PatientService;
 import com.LifeLineHospital.Hospital.sServiceIMPL.PatientServiceIMPL;
 
 
@@ -30,6 +31,13 @@ public class PatientController {
 public Patient addpatient (@RequestBody Patient patient) {
 	return patientServiceIMPL.savePatient(patient);
 }
+
+@GetMapping("/all")
+public List<Patient> getAllPatient(){
+	return patientServiceIMPL.getallpatient();
+}
+
+
 	
 
 }
