@@ -31,6 +31,12 @@ public class PatientServiceIMPL implements PatientService {
 		return patientRepository.save(patient);
 	}
 
+	@Override
+	public String deletepatient(Integer id) {
+		 patientRepository.deleteById(id);
+		return "Record Delted Succssfully  : "+id;
+	}
+
 	
 	
 

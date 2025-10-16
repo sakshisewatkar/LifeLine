@@ -3,7 +3,9 @@ package com.LifeLineHospital.Hospital.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,7 +44,10 @@ public Patient updatedPatient(@RequestBody Patient patient) {
 	return patientServiceIMPL.updatepatient(patient);
 }
 
-
+@DeleteMapping("/delete/{id}")
+public String deletepatient (@PathVariable Integer id) {
+	return patientServiceIMPL.deletepatient(id);
+}
 	
 
 }
