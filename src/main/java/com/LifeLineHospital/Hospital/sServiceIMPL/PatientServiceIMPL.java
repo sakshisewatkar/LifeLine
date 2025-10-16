@@ -1,6 +1,7 @@
 package com.LifeLineHospital.Hospital.sServiceIMPL;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,14 @@ public class PatientServiceIMPL implements PatientService {
 	public List<Patient> getallpatient() {
 		return patientRepository.findAll();
 	}
+
+	@Override
+	public Patient updatepatient(Patient patient) {
+		
+		return patientRepository.save(patient);
+	}
+
+	
 	
 
 

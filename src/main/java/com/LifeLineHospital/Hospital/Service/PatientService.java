@@ -8,5 +8,7 @@ public interface PatientService {
 	Patient savePatient (Patient patient);
 	
 	List<Patient> getallpatient();
+	
+	Patient updatepatient(Patient patient);
 
 }
