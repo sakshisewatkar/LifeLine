@@ -13,5 +13,11 @@ public interface PatientService {
 	Patient updatepatient(Patient patient);
 	
 	String deletepatient(Integer id);
+	
+	Patient getpatientById(int id);
+	Patient newsavePatient (Patient patient);
+	List<Patient> getNewUpdate();
+	
+	Patient updateName (String name , Integer id);
 
 }

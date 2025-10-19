@@ -37,6 +37,32 @@ public class PatientServiceIMPL implements PatientService {
 		return "Record Delted Succssfully  : "+id;
 	}
 
+	@Override
+	public Patient getpatientById(int id) {
+		return patientRepository.findById(id).orElse(null);
+	}
+
+	@Override
+	public Patient newsavePatient(Patient patient) {
+		return patientRepository.save(patient);
+	}
+
+	@Override
+	public List<Patient> getNewUpdate() {
+		return patientRepository.findAll();
+	}
+
+	@Override
+	public Patient updateName(String name, Integer id) {
+		Patient patient = patientRepository.findById(id).get();
+		patient.setName(name);
+		return patientRepository.save(patient);
+	}
+
+	
+
+	
+
 	
 	
 
