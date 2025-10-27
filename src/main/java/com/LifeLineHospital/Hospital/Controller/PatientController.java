@@ -1,4 +1,4 @@
-package com.LifeLineHospital.Hospital.Controller;
+ package com.LifeLineHospital.Hospital.Controller;
 
 import java.util.List;
 
@@ -15,16 +15,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.LifeLineHospital.Hospital.Model.Patient;
 import com.LifeLineHospital.Hospital.Service.PatientService;
-import com.LifeLineHospital.Hospital.sServiceIMPL.PatientServiceIMPL;
+import com.LifeLineHospital.Hospital.ServiceIMPL.PatientServiceIMPL;
+
 
 
 
 @RestController
 @RequestMapping("/patient")
+
 public class PatientController {
 	@Autowired
-	private PatientServiceIMPL patientServiceIMPL;
-	
+	PatientServiceIMPL patientServiceIMPL;
 	@GetMapping("/allpatient")
 	public String lifeline(){
 		return "Welcome to LIFELINE Hospital";
