@@ -1,4 +1,4 @@
-package com.LifeLineHospital.Hospital.sServiceIMPL;
+package com.LifeLineHospital.Hospital.ServiceIMPL;
 
 import java.util.List;
 import java.util.Optional;

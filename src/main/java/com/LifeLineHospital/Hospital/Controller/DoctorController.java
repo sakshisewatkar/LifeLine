@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.LifeLineHospital.Hospital.Model.Doctor;
-import com.LifeLineHospital.Hospital.sServiceIMPL.DoctorServiceIMPL;
+import com.LifeLineHospital.Hospital.ServiceIMPL.DoctorServiceIMPL;
 
 @RestController
 public class DoctorController {
