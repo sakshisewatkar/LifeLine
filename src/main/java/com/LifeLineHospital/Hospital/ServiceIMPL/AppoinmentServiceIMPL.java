@@ -20,11 +20,17 @@ private AppoinmentRepository appoinmentRepository;
 	public List<Appointment> addAppoinment() {
 		return appoinmentRepository.findAll();
 	}
+	
+	@Override
+	public Appointment getAllAppoinmentId(Integer id) {
+	     return appoinmentRepository.findById(id).orElse(null);
+	}
 	@Override
 	public List<Appointment> getAllAppoinment(Appointment appointment) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 	
 
 	
