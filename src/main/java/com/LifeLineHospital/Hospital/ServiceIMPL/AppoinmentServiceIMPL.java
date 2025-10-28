@@ -1,5 +1,7 @@
 package com.LifeLineHospital.Hospital.ServiceIMPL;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,16 @@ private AppoinmentRepository appoinmentRepository;
 	public Appointment saveappoinment(Appointment appointment) {
 		return appoinmentRepository.save(appointment);
 	}
+	@Override
+	public List<Appointment> addAppoinment() {
+		return appoinmentRepository.findAll();
+	}
+	@Override
+	public List<Appointment> getAllAppoinment(Appointment appointment) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 
 	
 
