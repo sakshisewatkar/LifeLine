@@ -12,4 +12,5 @@ public interface AppoinmentService {
 	List<Appointment> getAllAppoinment (Appointment appointment);
 	List<Appointment> addAppoinment();
 	Appointment getAllAppoinmentId (Integer id);
+	Appointment updateAppoinment (Appointment appointment);
 }

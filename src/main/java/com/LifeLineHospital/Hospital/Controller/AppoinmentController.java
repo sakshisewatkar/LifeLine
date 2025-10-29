@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,5 +35,10 @@ public List<Appointment> getAll(){
 @GetMapping("/{id}")	
 public Appointment getAppoinmentById(@PathVariable Integer id) {
 	return appoinmentServiceIMPL.getAllAppoinmentId(id);
+}
+
+@PutMapping("/update")
+public Appointment update(@RequestBody Appointment appointment) {
+	return appoinmentServiceIMPL.updateAppoinment(appointment);
 }
 }
