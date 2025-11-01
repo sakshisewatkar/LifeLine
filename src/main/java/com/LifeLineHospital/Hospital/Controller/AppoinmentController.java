@@ -41,4 +41,9 @@ public Appointment getAppoinmentById(@PathVariable Integer id) {
 public Appointment update(@RequestBody Appointment appointment) {
 	return appoinmentServiceIMPL.updateAppoinment(appointment);
 }
+
+@PutMapping("/updatepatient/{id}")
+public Appointment updatepatient (@PathVariable Integer id ,@RequestBody Integer patientid  ) {
+	return appoinmentServiceIMPL.updateAppoinmentID(id, patientid);
+}
 }
