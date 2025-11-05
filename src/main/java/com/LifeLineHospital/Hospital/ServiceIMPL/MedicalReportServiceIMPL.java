@@ -26,6 +26,11 @@ private MedicalReportRepository medicalReportRepository;
 public MedicalRecord addRecord(MedicalRecord medicalRecord) {
 	return medicalReportRepository.save(medicalRecord);
 }
+
+@Override
+public List<MedicalRecord> getAllRecords() {
+	return medicalReportRepository.findAll();
+}
 	
 
 }
