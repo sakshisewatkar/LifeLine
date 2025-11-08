@@ -31,6 +31,27 @@ public MedicalRecord addRecord(MedicalRecord medicalRecord) {
 public List<MedicalRecord> getAllRecords() {
 	return medicalReportRepository.findAll();
 }
-	
 
+@Override
+public MedicalRecord updateRecord(MedicalRecord medicalRecord) {
+	return medicalReportRepository.save(medicalRecord);
+}
+
+@Override
+public String deleteRecord(int id) {
+	medicalReportRepository.deleteById(id);
+	return "medical records deleted successfully with ID" + id;
+}
+
+@Override
+public MedicalRecord updateDiagnosis(int id, String diagnosis) {
+	MedicalRecord medicalRecord = medicalReportRepository.findById(id).orElse(null);
+	if(medicalRecord != null) {
+		medicalRecord.setDiagnosis(diagnosis);
+	return medicalReportRepository.save(medicalRecord);
+}
+return null;
+
+	
+}
 }
