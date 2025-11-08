@@ -18,8 +18,6 @@ import com.LifeLineHospital.Hospital.Service.PatientService;
 import com.LifeLineHospital.Hospital.ServiceIMPL.PatientServiceIMPL;
 
 
-
-
 @RestController
 @RequestMapping("/patient")
 

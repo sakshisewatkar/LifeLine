@@ -11,5 +11,9 @@ public interface MedicalReportService {
 	//read ---> get mapping 
 public List<MedicalRecord> getAllRecords();
 
+MedicalRecord updateRecord (MedicalRecord medicalRecord);
 
+String deleteRecord(int id);
+
+MedicalRecord updateDiagnosis (int id , String diagnosis);
 }
